@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+    <title>Home</title>
+</head>
+<body>
+    <!--Constitution de la navbar-->
+    <nav>
+        <div class="nom">
+            <h2>KOSMALX</h2>
+        </div>
+        <div class="pages">
+            <ul>
+                <li><a onclick="chargerPage('page_1.php')">Home</a></li>
+                <li><a onclick="chargerPage('page_2.php')">Shop</a></li>
+                <li><a onclick="chargerPage('page_3.php')">About Us</a></li>
+            </ul>
+        </div>
+        <div class="search">
+            <input type="search" name="Search" id="Search" placeholder="Search...">
+        </div>
+    </nav>
+    <!--Fin de constitution de la navbar-->
+
+
+
+    <!--Corps du site-->
+    <h1 id="titre">Produits</h1>
+    <!--Présentation des produits-->
+    <section class="produits">
+        
+        <div class="galerie">
+            <div class="products">
+                <div class="image">
+                    <img src="images/2015_Audi_R8_Coupé_5.2_FSI_quattro_(19409896583).jpg" alt="">
+                </div>
+                <div class="texte">
+                    <h2>Antenne STARKlink</h2>
+                    <p>450.000 FCFA</p>
+                    <button class="whatsapp">Contacter</button>
+                </div>
+            </div>
+            <div class="products">
+                <div class="image">
+                    <img src="images/2151394144.jpg" alt="">
+                </div>
+                <div class="texte">
+                    <h2>Antenne STARKlink</h2>
+                    <p>450.000 FCFA</p>
+                    <button class="whatsapp">Contacter</button>
+                </div>
+            </div>
+            <div class="products">
+                <div class="image">
+                    <img src="images/bêtise .png" alt="">
+                </div>
+                <div class="texte">
+                    <h2>Antenne STARKlink</h2>
+                    <p>450.000 FCFA</p>
+                    <button class="whatsapp">Contacter</button>
+                </div>
+            </div>
+            <div class="products">
+                <div class="image">
+                    <img src="images/téléchargé.jpeg" alt="">
+                </div>
+                <div class="texte">
+                    <h2>Antenne STARKlink</h2>
+                    <p>450.000 FCFA</p>
+                    <button class="whatsapp">Contacter</button>
+                </div>
+            </div>
+        </div>
+       
+        <!--code caché-->
+        <script>
+            function chargerPage(fichier){
+                fetch(fichier)
+                .then(response => {
+                    if (!response.ok) throw new Error("Erreur lors du chargement du fichier");
+                    return response.text();
+                })
+                .then(html => {
+                    document.getElementById("contenu").innerHTML = html;
+                })
+                .catch(err => {
+                    document.getElementById("contenu").innerHTML = "Impossible de charger la page : "+err;
+                });
+            }
+        </script>
+      
+       
+
+    </section>
+    <div id="contenu"></div>
+    <!--fin du corps du site-->
+</body>
+</html>

@@ -1,0 +1,17 @@
+<a href="#" id="lienTexte">Afficher le texte</a>
+
+<div id="contenu" style="display:none;">
+    <p>Salut Code Warrior !</p>
+    <script>
+        console.log("Ce script s'exécute quand le div devient visible !");
+        alert("Le code caché vient de s'exécuter 😎");
+    </script>
+</div>
+
+<script>
+document.getElementById('lienTexte').addEventListener('click', function(e){
+    e.preventDefault();
+    const div = document.getElementById('contenu');
+    div.style.display = 'block'; // affiche le div
+});
+</script>

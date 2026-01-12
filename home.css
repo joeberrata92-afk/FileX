@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px;
+  background: white;
+  box-shadow: -3px -2px 20px black;
+}
+.pages {
+  width: 40%;
+}
+.nom h1 {
+  font-family: "sans-serif";
+}
+ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+li a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.4em;
+  font-family: "Times New Roman", Times, serif;
+}
+.search input {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid black;
+}
+#titre {
+    margin: 1vw 0 0.7em 0.6em;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.produits {
+  display: flex;
+  justify-content: center;
+}
+.galerie {
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.products{
+    width: 100%;
+    box-shadow: 2px 1px 10px  black ;
+    border-radius: 8px;
+}
+
+.image img {
+  height: 200px;
+  width: 100%;
+
+  border-radius: 8px 8px 0 0;
+}
+.texte {
+    padding: 10px 0;
+    margin: 0 10px;
+}
+.texte p{
+    padding: 10px 0 4px 0;
+}
+.whatsapp{
+    padding: 15px;
+    width: 45%;
+    margin: 1vw 0;
+    background: rgb(1, 168, 93);
+    color: white;
+    border: none;
+    border-radius: 9px;
+}
+#iframe{
+  border-color: transparent;
+}
+a{
+  cursor: pointer;
+}
+a:hover{
+  color: green;
+}
